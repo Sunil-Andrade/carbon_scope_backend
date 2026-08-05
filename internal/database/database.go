@@ -31,6 +31,7 @@ func Connect(cfg *config.Config) {
 	DB = db
 
 	err = DB.AutoMigrate(
+		&models.Activity{},
 		&models.User{},
 	)
 
